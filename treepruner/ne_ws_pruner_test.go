@@ -4,7 +4,9 @@ import (
 	"reflect"
 	"testing"
 
+	"github.com/eh-am/i3-tree-viewer/testutils"
 	"github.com/eh-am/i3-tree-viewer/treepruner"
+	"github.com/hexops/autogold"
 	"go.i3wm.org/i3/v4"
 )
 
@@ -189,6 +191,31 @@ func TestNeWsPruner_Prune(t *testing.T) {
 			if got := w.Prune(tt.args.tree); !reflect.DeepEqual(got, tt.want) {
 				t.Errorf("NeWsPruner.Prune() = %v, want %v", got, tt.want)
 			}
+		})
+	}
+}
+
+func TestNeWsPruner_PruneRealTree(t *testing.T) {
+	type args struct {
+		filepath string
+	}
+	tests := []struct {
+		name string
+		args args
+	}{
+		{
+			"empty tree",
+			args{
+				filepath: "../testdata/tree1.json",
+			},
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			w := &treepruner.NeWsPruner{}
+			tree := testutils.TreeFromJSONFile(tt.args.filepath)
+			got := w.Prune(tree)
+			autogold.Equal(t, got)
 		})
 	}
 }
