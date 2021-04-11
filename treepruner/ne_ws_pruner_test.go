@@ -204,7 +204,7 @@ func TestNeWsPruner_PruneRealTree(t *testing.T) {
 		args args
 	}{
 		{
-			"empty tree",
+			"real tree 1",
 			args{
 				filepath: "../testdata/tree1.json",
 			},

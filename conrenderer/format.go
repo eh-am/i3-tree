@@ -7,17 +7,17 @@ import (
 	"go.i3wm.org/i3/v4"
 )
 
-func formatLayout(layout i3.Layout) string {
+func formatLayout(layout i3.Layout, au aurora.Aurora) string {
 	s := string(layout)
 	switch layout {
 	case "stacked":
-		return aurora.BrightGreen(s).String()
+		return au.BrightGreen(s).String()
 	case "tabbed":
-		return aurora.Green(s).String()
+		return au.Green(s).String()
 	case "splith":
-		return aurora.BrightYellow(s).String()
+		return au.BrightYellow(s).String()
 	case "splitv":
-		return aurora.Yellow(s).String()
+		return au.Yellow(s).String()
 	case "output":
 		return ""
 	default:
@@ -25,16 +25,16 @@ func formatLayout(layout i3.Layout) string {
 	}
 }
 
-func formatType(t i3.NodeType) string {
+func formatType(t i3.NodeType, au aurora.Aurora) string {
 	s := string(t)
 
 	switch t {
 	case "workspace":
-		return aurora.Cyan(s).String()
+		return au.Cyan(s).String()
 	case "con":
-		return aurora.Blue(s).String()
+		return au.Blue(s).String()
 	case "output":
-		return aurora.Magenta(s).String()
+		return au.Magenta(s).String()
 	default:
 		return s
 	}
@@ -47,16 +47,16 @@ func wrapBrackets(s string) string {
 	return s
 }
 
-func generateLayout(node *i3.Node) string {
+func generateLayout(node *i3.Node, au aurora.Aurora) string {
 	s := ""
 	// only show layout if it has children
 	if len(node.Nodes) > 0 {
-		return wrapBrackets(formatLayout(node.Layout))
+		return wrapBrackets(formatLayout(node.Layout, au))
 	}
 
 	return s
 }
 
-func generateType(node *i3.Node) string {
-	return wrapBrackets(formatType(node.Type))
+func generateType(node *i3.Node, au aurora.Aurora) string {
+	return wrapBrackets(formatType(node.Type, au))
 }

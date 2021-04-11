@@ -4,15 +4,20 @@ import (
 	"fmt"
 	"io"
 
+	"github.com/logrusorgru/aurora"
 	"go.i3wm.org/i3/v4"
 )
 
 type conRenderer struct {
-	w io.Writer
+	w  io.Writer
+	au aurora.Aurora
 }
 
-func NewConRenderer(w io.Writer) *conRenderer {
-	return &conRenderer{w}
+func NewConRenderer(w io.Writer, colors bool) *conRenderer {
+	return &conRenderer{
+		w:  w,
+		au: aurora.NewAurora(colors),
+	}
 }
 
 func (t *conRenderer) Render(tree *i3.Tree) {
@@ -20,8 +25,8 @@ func (t *conRenderer) Render(tree *i3.Tree) {
 }
 
 func (t *conRenderer) print(node *i3.Node, prefix string, marker string, level int) {
-	ftype := generateType(node)
-	flayout := generateLayout(node)
+	ftype := generateType(node, t.au)
+	flayout := generateLayout(node, t.au)
 
 	fmt.Fprint(
 		t.w,

@@ -1,0 +1,1022 @@
+{
+  "id": 94819115939664,
+  "name": "root",
+  "type": "root",
+  "border": "normal",
+  "current_border_width": -1,
+  "layout": "splith",
+  "percent": 0,
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "width": 3840,
+    "height": 2160
+  },
+  "window_rect": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0
+  },
+  "deco_rect": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0
+  },
+  "geometry": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0
+  },
+  "window": 0,
+  "window_properties": {
+    "title": "",
+    "instance": "",
+    "class": "",
+    "window_role": "",
+    "transient_for": 0
+  },
+  "urgent": false,
+  "marks": [],
+  "focused": false,
+  "window_type": "",
+  "fullscreen_mode": 0,
+  "focus": [
+    94819115951808,
+    94819115942016
+  ],
+  "nodes": [
+    {
+      "id": 94819115951808,
+      "name": "DP-0",
+      "type": "output",
+      "border": "normal",
+      "current_border_width": -1,
+      "layout": "output",
+      "percent": 0.5,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 3840,
+        "height": 2160
+      },
+      "window_rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "deco_rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "geometry": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "window": 0,
+      "window_properties": {
+        "title": "",
+        "instance": "",
+        "class": "",
+        "window_role": "",
+        "transient_for": 0
+      },
+      "urgent": false,
+      "marks": [],
+      "focused": false,
+      "window_type": "",
+      "fullscreen_mode": 0,
+      "focus": [
+        94819115958304,
+        94819115955040,
+        94819115961568
+      ],
+      "nodes": [
+        {
+          "id": 94819115958304,
+          "name": "content",
+          "type": "con",
+          "border": "normal",
+          "current_border_width": -1,
+          "layout": "splith",
+          "percent": 0,
+          "rect": {
+            "x": 0,
+            "y": 32,
+            "width": 3840,
+            "height": 2088
+          },
+          "window_rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "deco_rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "window": 0,
+          "window_properties": {
+            "title": "",
+            "instance": "",
+            "class": "",
+            "window_role": "",
+            "transient_for": 0
+          },
+          "urgent": false,
+          "marks": [],
+          "focused": false,
+          "window_type": "",
+          "fullscreen_mode": 0,
+          "focus": [
+            94819116811520,
+            94819115673456,
+            94819116002832,
+            94819116030416
+          ],
+          "nodes": [
+            {
+              "id": 94819116030416,
+              "name": "1",
+              "type": "workspace",
+              "border": "normal",
+              "current_border_width": -1,
+              "layout": "splith",
+              "percent": 0.25,
+              "rect": {
+                "x": 0,
+                "y": 32,
+                "width": 3840,
+                "height": 2088
+              },
+              "window_rect": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "deco_rect": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "geometry": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "window": 0,
+              "window_properties": {
+                "title": "",
+                "instance": "",
+                "class": "",
+                "window_role": "",
+                "transient_for": 0
+              },
+              "urgent": false,
+              "marks": [],
+              "focused": false,
+              "window_type": "",
+              "fullscreen_mode": 0,
+              "focus": [
+                94819116148752,
+                94819116135104,
+                94819116130224,
+                94819116104848
+              ],
+              "nodes": [
+                {
+                  "id": 94819116104848,
+                  "name": "Justin no Twitter: \"@ThatsMauvelous Fun Fact: Microsoft paid for both sync + master license for \"Start Me Up\" from the Rolling Stones for the Windows XP. Video editor of the TV ad was a huge Stones fan, and when the licensed files were delivered to him for editing he said they weren't the masters. 1/2\" / Twitter — Mozilla Firefox",
+                  "type": "con",
+                  "border": "pixel",
+                  "current_border_width": 5,
+                  "layout": "splith",
+                  "percent": 0.25,
+                  "rect": {
+                    "x": 0,
+                    "y": 32,
+                    "width": 960,
+                    "height": 2088
+                  },
+                  "window_rect": {
+                    "x": 5,
+                    "y": 5,
+                    "width": 950,
+                    "height": 2078
+                  },
+                  "deco_rect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 0,
+                    "height": 0
+                  },
+                  "geometry": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 950,
+                    "height": 2078
+                  },
+                  "window": 85983235,
+                  "window_properties": {
+                    "title": "Justin no Twitter: \"@ThatsMauvelous Fun Fact: Microsoft paid for both sync + master license for \"Start Me Up\" from the Rolling Stones for the Windows XP. Video editor of the TV ad was a huge Stones fan, and when the licensed files were delivered to him for editing he said they weren't the masters. 1/2\" / Twitter — Mozilla Firefox",
+                    "instance": "Navigator",
+                    "class": "Firefox",
+                    "window_role": "browser",
+                    "transient_for": 0
+                  },
+                  "urgent": false,
+                  "marks": [],
+                  "focused": false,
+                  "window_type": "normal",
+                  "fullscreen_mode": 0,
+                  "focus": [],
+                  "nodes": [],
+                  "floating_nodes": []
+                },
+                {
+                  "id": 94819116130224,
+                  "name": "Rebuilding My Personal Infrastructure With Alpine Linux and Docker - WezM.net by Wesley Moore — Mozilla Firefox",
+                  "type": "con",
+                  "border": "pixel",
+                  "current_border_width": 5,
+                  "layout": "splith",
+                  "percent": 0.25,
+                  "rect": {
+                    "x": 960,
+                    "y": 32,
+                    "width": 960,
+                    "height": 2088
+                  },
+                  "window_rect": {
+                    "x": 5,
+                    "y": 5,
+                    "width": 950,
+                    "height": 2078
+                  },
+                  "deco_rect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 0,
+                    "height": 0
+                  },
+                  "geometry": {
+                    "x": 1920,
+                    "y": 32,
+                    "width": 950,
+                    "height": 2078
+                  },
+                  "window": 85983317,
+                  "window_properties": {
+                    "title": "Rebuilding My Personal Infrastructure With Alpine Linux and Docker - WezM.net by Wesley Moore — Mozilla Firefox",
+                    "instance": "Navigator",
+                    "class": "Firefox",
+                    "window_role": "browser",
+                    "transient_for": 0
+                  },
+                  "urgent": false,
+                  "marks": [],
+                  "focused": false,
+                  "window_type": "normal",
+                  "fullscreen_mode": 0,
+                  "focus": [],
+                  "nodes": [],
+                  "floating_nodes": []
+                },
+                {
+                  "id": 94819116135104,
+                  "name": "web_development_with_go — Mozilla Firefox",
+                  "type": "con",
+                  "border": "pixel",
+                  "current_border_width": 5,
+                  "layout": "splith",
+                  "percent": 0.25,
+                  "rect": {
+                    "x": 1920,
+                    "y": 32,
+                    "width": 960,
+                    "height": 2088
+                  },
+                  "window_rect": {
+                    "x": 5,
+                    "y": 5,
+                    "width": 950,
+                    "height": 2078
+                  },
+                  "deco_rect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 0,
+                    "height": 0
+                  },
+                  "geometry": {
+                    "x": 2880,
+                    "y": 32,
+                    "width": 950,
+                    "height": 2078
+                  },
+                  "window": 85983328,
+                  "window_properties": {
+                    "title": "web_development_with_go — Mozilla Firefox",
+                    "instance": "Navigator",
+                    "class": "Firefox",
+                    "window_role": "browser",
+                    "transient_for": 0
+                  },
+                  "urgent": false,
+                  "marks": [],
+                  "focused": false,
+                  "window_type": "normal",
+                  "fullscreen_mode": 0,
+                  "focus": [],
+                  "nodes": [],
+                  "floating_nodes": []
+                },
+                {
+                  "id": 94819116148752,
+                  "name": "Linux Academy | Log In — Mozilla Firefox",
+                  "type": "con",
+                  "border": "pixel",
+                  "current_border_width": 5,
+                  "layout": "splith",
+                  "percent": 0.25,
+                  "rect": {
+                    "x": 2880,
+                    "y": 32,
+                    "width": 960,
+                    "height": 2088
+                  },
+                  "window_rect": {
+                    "x": 5,
+                    "y": 5,
+                    "width": 950,
+                    "height": 2078
+                  },
+                  "deco_rect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 0,
+                    "height": 0
+                  },
+                  "geometry": {
+                    "x": 0,
+                    "y": 80,
+                    "width": 1910,
+                    "height": 2035
+                  },
+                  "window": 85983339,
+                  "window_properties": {
+                    "title": "Linux Academy | Log In — Mozilla Firefox",
+                    "instance": "Navigator",
+                    "class": "Firefox",
+                    "window_role": "browser",
+                    "transient_for": 0
+                  },
+                  "urgent": false,
+                  "marks": [],
+                  "focused": false,
+                  "window_type": "normal",
+                  "fullscreen_mode": 0,
+                  "focus": [],
+                  "nodes": [],
+                  "floating_nodes": []
+                }
+              ],
+              "floating_nodes": []
+            },
+            {
+              "id": 94819115673456,
+              "name": "2",
+              "type": "workspace",
+              "border": "normal",
+              "current_border_width": -1,
+              "layout": "splith",
+              "percent": 0.25,
+              "rect": {
+                "x": 0,
+                "y": 32,
+                "width": 3840,
+                "height": 2088
+              },
+              "window_rect": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "deco_rect": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "geometry": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "window": 0,
+              "window_properties": {
+                "title": "",
+                "instance": "",
+                "class": "",
+                "window_role": "",
+                "transient_for": 0
+              },
+              "urgent": false,
+              "marks": [],
+              "focused": false,
+              "window_type": "",
+              "fullscreen_mode": 0,
+              "focus": [
+                94819116142272
+              ],
+              "nodes": [
+                {
+                  "id": 94819116142272,
+                  "name": "\"But my system is really complex!\" - Choosing a Good SLI | Coursera — Mozilla Firefox",
+                  "type": "con",
+                  "border": "pixel",
+                  "current_border_width": 5,
+                  "layout": "splith",
+                  "percent": 1,
+                  "rect": {
+                    "x": 0,
+                    "y": 32,
+                    "width": 3840,
+                    "height": 2088
+                  },
+                  "window_rect": {
+                    "x": 5,
+                    "y": 5,
+                    "width": 3830,
+                    "height": 2078
+                  },
+                  "deco_rect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 0,
+                    "height": 0
+                  },
+                  "geometry": {
+                    "x": 960,
+                    "y": 32,
+                    "width": 950,
+                    "height": 2078
+                  },
+                  "window": 85983306,
+                  "window_properties": {
+                    "title": "\"But my system is really complex!\" - Choosing a Good SLI | Coursera — Mozilla Firefox",
+                    "instance": "Navigator",
+                    "class": "Firefox",
+                    "window_role": "browser",
+                    "transient_for": 0
+                  },
+                  "urgent": false,
+                  "marks": [],
+                  "focused": false,
+                  "window_type": "normal",
+                  "fullscreen_mode": 0,
+                  "focus": [],
+                  "nodes": [],
+                  "floating_nodes": []
+                }
+              ],
+              "floating_nodes": []
+            },
+            {
+              "id": 94819116811520,
+              "name": "3",
+              "type": "workspace",
+              "border": "normal",
+              "current_border_width": -1,
+              "layout": "splith",
+              "percent": 0.25,
+              "rect": {
+                "x": 0,
+                "y": 32,
+                "width": 3840,
+                "height": 2088
+              },
+              "window_rect": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "deco_rect": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "geometry": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "window": 0,
+              "window_properties": {
+                "title": "",
+                "instance": "",
+                "class": "",
+                "window_role": "",
+                "transient_for": 0
+              },
+              "urgent": false,
+              "marks": [],
+              "focused": false,
+              "window_type": "",
+              "fullscreen_mode": 1,
+              "focus": [
+                94819116096112
+              ],
+              "nodes": [
+                {
+                  "id": 94819116096112,
+                  "name": "",
+                  "type": "con",
+                  "border": "normal",
+                  "current_border_width": -1,
+                  "layout": "stacked",
+                  "percent": 1,
+                  "rect": {
+                    "x": 0,
+                    "y": 32,
+                    "width": 3840,
+                    "height": 2088
+                  },
+                  "window_rect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 0,
+                    "height": 0
+                  },
+                  "deco_rect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 0,
+                    "height": 0
+                  },
+                  "geometry": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 0,
+                    "height": 0
+                  },
+                  "window": 0,
+                  "window_properties": {
+                    "title": "",
+                    "instance": "",
+                    "class": "",
+                    "window_role": "",
+                    "transient_for": 0
+                  },
+                  "urgent": false,
+                  "marks": [],
+                  "focused": false,
+                  "window_type": "",
+                  "fullscreen_mode": 0,
+                  "focus": [
+                    94819116169936,
+                    94819116173152
+                  ],
+                  "nodes": [
+                    {
+                      "id": 94819116169936,
+                      "name": "tmux /home/eduardo",
+                      "type": "con",
+                      "border": "pixel",
+                      "current_border_width": 5,
+                      "layout": "splith",
+                      "percent": 0.5,
+                      "rect": {
+                        "x": 0,
+                        "y": 80,
+                        "width": 3840,
+                        "height": 2040
+                      },
+                      "window_rect": {
+                        "x": 5,
+                        "y": 0,
+                        "width": 3830,
+                        "height": 2035
+                      },
+                      "deco_rect": {
+                        "x": 0,
+                        "y": 0,
+                        "width": 3840,
+                        "height": 24
+                      },
+                      "geometry": {
+                        "x": 0,
+                        "y": 0,
+                        "width": 882,
+                        "height": 621
+                      },
+                      "window": 50639709,
+                      "window_properties": {
+                        "title": "tmux /home/eduardo",
+                        "instance": "terminator",
+                        "class": "Terminator",
+                        "window_role": "",
+                        "transient_for": 0
+                      },
+                      "urgent": false,
+                      "marks": [],
+                      "focused": true,
+                      "window_type": "normal",
+                      "fullscreen_mode": 0,
+                      "focus": [],
+                      "nodes": [],
+                      "floating_nodes": []
+                    },
+                    {
+                      "id": 94819116173152,
+                      "name": "autogold/autogold.go at main · hexops/autogold — Mozilla Firefox",
+                      "type": "con",
+                      "border": "pixel",
+                      "current_border_width": 5,
+                      "layout": "splith",
+                      "percent": 0.5,
+                      "rect": {
+                        "x": 0,
+                        "y": 80,
+                        "width": 3840,
+                        "height": 2040
+                      },
+                      "window_rect": {
+                        "x": 5,
+                        "y": 0,
+                        "width": 3830,
+                        "height": 2035
+                      },
+                      "deco_rect": {
+                        "x": 0,
+                        "y": 24,
+                        "width": 3840,
+                        "height": 24
+                      },
+                      "geometry": {
+                        "x": 0,
+                        "y": 0,
+                        "width": 3830,
+                        "height": 2078
+                      },
+                      "window": 86018978,
+                      "window_properties": {
+                        "title": "autogold/autogold.go at main · hexops/autogold — Mozilla Firefox",
+                        "instance": "Navigator",
+                        "class": "Firefox",
+                        "window_role": "browser",
+                        "transient_for": 0
+                      },
+                      "urgent": false,
+                      "marks": [],
+                      "focused": false,
+                      "window_type": "normal",
+                      "fullscreen_mode": 0,
+                      "focus": [],
+                      "nodes": [],
+                      "floating_nodes": []
+                    }
+                  ],
+                  "floating_nodes": []
+                }
+              ],
+              "floating_nodes": []
+            },
+            {
+              "id": 94819116002832,
+              "name": "6",
+              "type": "workspace",
+              "border": "normal",
+              "current_border_width": -1,
+              "layout": "splith",
+              "percent": 0.25,
+              "rect": {
+                "x": 0,
+                "y": 32,
+                "width": 3840,
+                "height": 2088
+              },
+              "window_rect": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "deco_rect": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "geometry": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "window": 0,
+              "window_properties": {
+                "title": "",
+                "instance": "",
+                "class": "",
+                "window_role": "",
+                "transient_for": 0
+              },
+              "urgent": false,
+              "marks": [],
+              "focused": false,
+              "window_type": "",
+              "fullscreen_mode": 0,
+              "focus": [
+                94819116277424,
+                94819116790128
+              ],
+              "nodes": [
+                {
+                  "id": 94819116277424,
+                  "name": "",
+                  "type": "con",
+                  "border": "normal",
+                  "current_border_width": -1,
+                  "layout": "stacked",
+                  "percent": 0.5010416666666667,
+                  "rect": {
+                    "x": 0,
+                    "y": 32,
+                    "width": 1924,
+                    "height": 2088
+                  },
+                  "window_rect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 0,
+                    "height": 0
+                  },
+                  "deco_rect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 0,
+                    "height": 0
+                  },
+                  "geometry": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 0,
+                    "height": 0
+                  },
+                  "window": 0,
+                  "window_properties": {
+                    "title": "",
+                    "instance": "",
+                    "class": "",
+                    "window_role": "",
+                    "transient_for": 0
+                  },
+                  "urgent": false,
+                  "marks": [],
+                  "focused": false,
+                  "window_type": "",
+                  "fullscreen_mode": 0,
+                  "focus": [
+                    94819116058832,
+                    94819116052880
+                  ],
+                  "nodes": [
+                    {
+                      "id": 94819116058832,
+                      "name": "Binary Trees · Ninety-nine Problems, Solved in Elm — Mozilla Firefox",
+                      "type": "con",
+                      "border": "pixel",
+                      "current_border_width": 5,
+                      "layout": "splith",
+                      "percent": 0.5519549395743402,
+                      "rect": {
+                        "x": 0,
+                        "y": 80,
+                        "width": 1924,
+                        "height": 2040
+                      },
+                      "window_rect": {
+                        "x": 5,
+                        "y": 0,
+                        "width": 1914,
+                        "height": 2035
+                      },
+                      "deco_rect": {
+                        "x": 0,
+                        "y": 0,
+                        "width": 1924,
+                        "height": 24
+                      },
+                      "geometry": {
+                        "x": 0,
+                        "y": 0,
+                        "width": 1910,
+                        "height": 1987
+                      },
+                      "window": 77594627,
+                      "window_properties": {
+                        "title": "Binary Trees · Ninety-nine Problems, Solved in Elm — Mozilla Firefox",
+                        "instance": "Navigator",
+                        "class": "Firefox",
+                        "window_role": "browser",
+                        "transient_for": 0
+                      },
+                      "urgent": false,
+                      "marks": [],
+                      "focused": false,
+                      "window_type": "normal",
+                      "fullscreen_mode": 0,
+                      "focus": [],
+                      "nodes": [],
+                      "floating_nodes": []
+                    },
+                    {
+                      "id": 94819116052880,
+                      "name": "",
+                      "type": "con",
+                      "border": "normal",
+                      "current_border_width": -1,
+                      "layout": "stacked",
+                      "percent": 0.4480450604256597,
+                      "rect": {
+                        "x": 0,
+                        "y": 80,
+                        "width": 1924,
+                        "height": 2040
+                      },
+                      "window_rect": {
+                        "x": 0,
+                        "y": 0,
+                        "width": 0,
+                        "height": 0
+                      },
+                      "deco_rect": {
+                        "x": 0,
+                        "y": 24,
+                        "width": 1924,
+                        "height": 24
+                      },
+                      "geometry": {
+                        "x": 0,
+                        "y": 0,
+                        "width": 0,
+                        "height": 0
+                      },
+                      "window": 0,
+                      "window_properties": {
+                        "title": "",
+                        "instance": "",
+                        "class": "",
+                        "window_role": "",
+                        "transient_for": 0
+                      },
+                      "urgent": false,
+                      "marks": [],
+                      "focused": false,
+                      "window_type": "",
+                      "fullscreen_mode": 0,
+                      "focus": [
+                        94819116156576
+                      ],
+                      "nodes": [
+                        {
+                          "id": 94819116156576,
+                          "name": "GoLab 2019 - Eleanor McHugh - Keynote: An Introduction To Functional Programming In Go - YouTube — Mozilla Firefox",
+                          "type": "con",
+                          "border": "pixel",
+                          "current_border_width": 5,
+                          "layout": "splith",
+                          "percent": 1,
+                          "rect": {
+                            "x": 0,
+                            "y": 80,
+                            "width": 1924,
+                            "height": 2040
+                          },
+                          "window_rect": {
+                            "x": 5,
+                            "y": 5,
+                            "width": 1914,
+                            "height": 2030
+                          },
+                          "deco_rect": {
+                            "x": 0,
+                            "y": 0,
+                            "width": 1924,
+                            "height": 24
+                          },
+                          "geometry": {
+                            "x": 1061,
+                            "y": 125,
+                            "width": 1910,
+                            "height": 2035
+                          },
+                          "window": 77647910,
+                          "window_properties": {
+                            "title": "GoLab 2019 - Eleanor McHugh - Keynote: An Introduction To Functional Programming In Go - YouTube — Mozilla Firefox",
+                            "instance": "Navigator",
+                            "class": "Firefox",
+                            "window_role": "browser",
+                            "transient_for": 0
+                          },
+                          "urgent": false,
+                          "marks": [],
+                          "focused": false,
+                          "window_type": "normal",
+                          "fullscreen_mode": 0,
+                          "focus": [],
+                          "nodes": [],
+                          "floating_nodes": []
+                        }
+                      ],
+                      "floating_nodes": []
+                    }
+                  ],
+                  "floating_nodes": []
+                },
+                {
+                  "id": 94819116790128,
+                  "name": "tmux /home/eduardo/tmp",
+                  "type": "con",
+                  "border": "pixel",
+                  "current_border_width": 5,
+                  "layout": "splith",
+                  "percent": 0.49895833333333334,
+                  "rect": {
+                    "x": 1924,
+                    "y": 32,
+                    "width": 1916,
+                    "height": 2088
+                  },
+                  "window_rect": {
+                    "x": 5,
+                    "y": 5,
+                    "width": 1906,
+                    "height": 2078
+                  },
+                  "deco_rect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 0,
+                    "height": 0
+                  },
+                  "geometry": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 882,
+                    "height": 621
+                  },
+                  "window": 50488414,
+                  "window_properties": {
+                    "title": "tmux /home/eduardo/tmp",
+                    "instance": "terminator",
+                    "class": "Terminator",
+                    "window_role": "",
+                    "transient_for": 0
+                  },
+                  "urgent": false,
+                  "marks": [],
+                  "focused": false,
+                  "window_type": "normal",
+                  "fullscreen_mode": 0,
+                  "focus": [],
+                  "nodes": [],
+                  "floating_nodes": []
+                }
+              ],
+              "floating_nodes": []
+            }
+          ],
+          "floating_nodes": []
+        }
+      ],
+      "floating_nodes": []
+    }
+  ],
+  "floating_nodes": []
+}
