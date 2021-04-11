@@ -15,8 +15,9 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    # since that's what works best with act :\
+    # https://github.com/nektos/act/issues/107#issuecomment-650196259
+    runs-on: ubuntu-18.04
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -31,17 +32,14 @@ jobs:
           # Whether to download only stable versions
           stable: true
 
-      - name: Install make
-        run: apt-get update && apt-get install -y build-essential
-
       - name: install dependencies
-        run: go get
-
-      - name: Test
-        run: make test
+        run: make install
 
       - name: golangci-lint
         uses: golangci/golangci-lint-action@v2
         with:
-          # Optional: version of golangci-lint to use in form of v1.2 or v1.2.3 or `latest` to use the latest version
           version: v1.29
+
+      - name: Test
+        run: make test
+
