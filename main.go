@@ -44,5 +44,8 @@ func main() {
 		},
 	}
 
-	root.ParseAndRun(context.Background(), os.Args[1:])
+	err := root.ParseAndRun(context.Background(), os.Args[1:])
+	if err != nil {
+		log.Fatal(err)
+	}
 }
