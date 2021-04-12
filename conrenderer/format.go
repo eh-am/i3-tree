@@ -18,8 +18,6 @@ func formatLayout(layout i3.Layout, au aurora.Aurora) string {
 		return au.BrightYellow(s).String()
 	case "splitv":
 		return au.Yellow(s).String()
-	case "output":
-		return ""
 	default:
 		return s
 	}
