@@ -35,11 +35,22 @@ jobs:
       - name: install dependencies
         run: make install
 
-      - name: golangci-lint
-        uses: golangci/golangci-lint-action@v2
-        with:
-          version: v1.29
 
       - name: Test
         run: make test
 
+  # Run in parallel as per https://github.com/golangci/golangci-lint-action#how-to-use
+  golangci-lint:
+    # since that's what works best with act :\
+    # https://github.com/nektos/act/issues/107#issuecomment-650196259
+    runs-on: ubuntu-18.04
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: golangci-lint
+        uses: golangci/golangci-lint-action@v2
+        with:
+          version: v1.29
