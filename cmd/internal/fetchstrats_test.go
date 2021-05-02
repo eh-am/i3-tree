@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/eh-am/i3-tree-viewer/cmd/internal"
-	"github.com/eh-am/i3-tree-viewer/fetch"
+	"github.com/eh-am/i3-tree-viewer/pkg/fetch"
 	"github.com/eh-am/i3-tree-viewer/pkg/i3treeviewer"
 	"github.com/stretchr/testify/assert"
 )

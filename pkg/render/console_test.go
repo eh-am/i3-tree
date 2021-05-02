@@ -5,7 +5,7 @@ import (
 	"io"
 	"testing"
 
-	"github.com/eh-am/i3-tree-viewer/render"
+	"github.com/eh-am/i3-tree-viewer/pkg/render"
 	"github.com/stretchr/testify/assert"
 	"go.i3wm.org/i3/v4"
 )

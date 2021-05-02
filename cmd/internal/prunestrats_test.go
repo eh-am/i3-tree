@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/eh-am/i3-tree-viewer/cmd/internal"
-	"github.com/eh-am/i3-tree-viewer/prune"
+	"github.com/eh-am/i3-tree-viewer/pkg/prune"
 	"github.com/stretchr/testify/assert"
 )
 

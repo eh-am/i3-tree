@@ -8,7 +8,7 @@ import (
 
 	"github.com/eh-am/i3-tree-viewer/cmd/internal"
 	"github.com/eh-am/i3-tree-viewer/pkg/i3treeviewer"
-	"github.com/eh-am/i3-tree-viewer/render"
+	"github.com/eh-am/i3-tree-viewer/pkg/render"
 	"github.com/peterbourgon/ff/v3/ffcli"
 )
 
