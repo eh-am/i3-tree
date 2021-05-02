@@ -1,9 +1,9 @@
-package cmd_test
+package internal_test
 
 import (
 	"testing"
 
-	"github.com/eh-am/i3-tree-viewer/cmd"
+	"github.com/eh-am/i3-tree-viewer/cmd/internal"
 	"github.com/eh-am/i3-tree-viewer/fetch"
 	"github.com/eh-am/i3-tree-viewer/i3treeviewer"
 	"github.com/stretchr/testify/assert"
@@ -16,12 +16,12 @@ func TestNewFetcher(t *testing.T) {
 		wantErr   error
 	}{
 		{"i3", fetch.FromI3{}, nil},
-		{"unknown", nil, cmd.BadFetchStratError{"unknown"}},
+		{"unknown", nil, internal.BadFetchStratError{"unknown"}},
 	}
 
 	for _, tt := range cases {
 		t.Run(tt.stratName, func(t *testing.T) {
-			got, gotErr := cmd.NewFetcher(tt.stratName)
+			got, gotErr := internal.NewFetcher(tt.stratName)
 
 			assert.Equal(t, tt.want, got)
 			assert.Equal(t, tt.wantErr, gotErr)

@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/eh-am/i3-tree-viewer/cmd/internal"
 	"github.com/eh-am/i3-tree-viewer/i3treeviewer"
 	"github.com/eh-am/i3-tree-viewer/render"
 	"github.com/peterbourgon/ff/v3/ffcli"
@@ -21,14 +22,14 @@ func init() {
 
 	fetchStratName = rootFs.String(
 		"fetch-strat",
-		string(FromI3),
+		string(internal.FromI3),
 		"where to fetch the tree from",
 	)
 
 	pruneStratName = rootFs.String(
 		"prune-strat",
-		string(NonEmptyWsPruneStrat), // Default
-		"what to prune from the (possible raw) tree i3. "+fmt.Sprintf("%s", AvailablePruneStrats),
+		string(internal.NonEmptyWsPruneStrat), // Default
+		"what to prune from the (possible raw) tree i3. "+fmt.Sprintf("%s", internal.AvailablePruneStrats),
 	)
 
 	root = &ffcli.Command{
@@ -41,12 +42,12 @@ func init() {
 }
 
 func rootExec(ctx context.Context, args []string) error {
-	fetcher, err := NewFetcher(*fetchStratName)
+	fetcher, err := internal.NewFetcher(*fetchStratName)
 	if err != nil {
 		return err
 	}
 
-	pruner, err := NewPruner(*pruneStratName)
+	pruner, err := internal.NewPruner(*pruneStratName)
 	if err != nil {
 		return err
 	}

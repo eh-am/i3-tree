@@ -1,4 +1,4 @@
-package cmd
+package internal
 
 import (
 	"github.com/eh-am/i3-tree-viewer/fetch"
