@@ -9,8 +9,11 @@ require (
 	github.com/logrusorgru/aurora/v3 v3.0.0
 	github.com/peterbourgon/ff v1.7.0 // indirect
 	github.com/peterbourgon/ff/v3 v3.0.0
+	github.com/pkg/errors v0.9.1 // indirect
+	github.com/stretchr/testify v1.7.0
 	go.i3wm.org/i3/v4 v4.18.0
 	golang.org/x/mod v0.4.2 // indirect
 	golang.org/x/sys v0.0.0-20210403161142-5e06dd20ab57 // indirect
+	gotest.tools v2.2.0+incompatible
 	mvdan.cc/gofumpt v0.1.1 // indirect
 )
