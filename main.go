@@ -7,8 +7,8 @@ import (
 	"log"
 	"os"
 
-	cr "github.com/eh-am/i3-tree-viewer/conrenderer"
 	"github.com/eh-am/i3-tree-viewer/i3treeviewer"
+	"github.com/eh-am/i3-tree-viewer/render"
 	"github.com/eh-am/i3-tree-viewer/treepruner"
 	"github.com/peterbourgon/ff/v3/ffcli"
 	"go.i3wm.org/i3/v4"
@@ -36,7 +36,7 @@ func main() {
 
 			i3tv := i3treeviewer.NewI3TreeViewer(
 				pruner,
-				cr.NewConRenderer(os.Stdout, true),
+				render.NewConsole(os.Stdout, true),
 			)
 
 			i3tv.View(&tree)

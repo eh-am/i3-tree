@@ -1,4 +1,4 @@
-package conrenderer
+package render
 
 import (
 	"fmt"
@@ -8,25 +8,25 @@ import (
 	"go.i3wm.org/i3/v4"
 )
 
-type conRenderer struct {
+type console struct {
 	w  io.Writer
 	au aurora.Aurora
 }
 
-func NewConRenderer(w io.Writer, colors bool) *conRenderer {
-	return &conRenderer{
+func NewConsole(w io.Writer, colors bool) *console {
+	return &console{
 		w:  w,
 		au: aurora.NewAurora(colors),
 	}
 }
 
-func (t *conRenderer) Render(tree *i3.Tree) {
+func (t *console) Render(tree *i3.Tree) {
 	t.print(tree.Root, "", "", 0)
 }
 
-func (t *conRenderer) print(node *i3.Node, prefix string, marker string, level int) {
-	ftype := generateType(node, t.au)
-	flayout := generateLayout(node, t.au)
+func (t *console) print(node *i3.Node, prefix string, marker string, level int) {
+	ftype := t.formatType(node, t.au)
+	flayout := t.formatLayout(node, t.au)
 
 	fmt.Fprint(
 		t.w,

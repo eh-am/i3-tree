@@ -1,11 +1,11 @@
-package conrenderer_test
+package render_test
 
 import (
 	"bytes"
 	"io"
 	"testing"
 
-	"github.com/eh-am/i3-tree-viewer/conrenderer"
+	"github.com/eh-am/i3-tree-viewer/render"
 	"github.com/stretchr/testify/assert"
 	"go.i3wm.org/i3/v4"
 )
@@ -174,7 +174,7 @@ func TestConRendererNoColor(t *testing.T) {
 	tree := fakeTree()
 
 	var writer bytes.Buffer
-	r := conrenderer.NewConRenderer(io.Writer(&writer), false)
+	r := render.NewConsole(io.Writer(&writer), false)
 	r.Render(&tree)
 
 	got := writer.String()
@@ -211,7 +211,7 @@ func TestConRendererWithColor(t *testing.T) {
 	tree := fakeTree()
 
 	var writer bytes.Buffer
-	r := conrenderer.NewConRenderer(io.Writer(&writer), true)
+	r := render.NewConsole(io.Writer(&writer), true)
 	r.Render(&tree)
 
 	got := writer.String()
