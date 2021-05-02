@@ -4,36 +4,28 @@ import (
 	"testing"
 
 	"github.com/eh-am/i3-tree-viewer/cmd/internal"
+	"github.com/eh-am/i3-tree-viewer/pkg/i3treeviewer"
 	"github.com/eh-am/i3-tree-viewer/pkg/prune"
 	"github.com/stretchr/testify/assert"
 )
 
 func TestNewPruner(t *testing.T) {
-	t.Run("strat: none", func(t *testing.T) {
-		want := &prune.NoOp{}
-		got, err := internal.NewPruner("none")
+	cases := []struct {
+		stratName string
+		want      i3treeviewer.Pruner
+		wantErr   error
+	}{
+		{"none", &prune.NoOp{}, nil},
+		{"non-empty-ws", &prune.NonEmptyWs{}, nil},
+		{"unknown", nil, internal.BadPruneStratError{"unknown"}},
+	}
 
-		assert.NoError(t, err)
-		assert.Equal(t, want, got)
-	})
+	for _, tt := range cases {
+		t.Run(tt.stratName, func(t *testing.T) {
+			got, gotErr := internal.NewPruner(tt.stratName)
 
-	t.Run("strat: non-empty-ws", func(t *testing.T) {
-		want := &prune.NonEmptyWs{}
-		got, err := internal.NewPruner("non-empty-ws")
-
-		assert.NoError(t, err)
-		assert.Equal(t, want, got)
-	})
-
-	t.Run("strat: badstrat", func(t *testing.T) {
-		_, err := internal.NewPruner("badstrat")
-
-		wantErr := internal.BadPruneStratError{"badstrat"}
-		assert.Equal(t, wantErr, err)
-
-		// Not entirely sure about testing the error message
-		// But since it will be shown to clients
-		// I will consider part of the API and therefore should tested
-		assert.Equal(t, wantErr.Error(), "invalid prune strat: badstrat")
-	})
+			assert.Equal(t, tt.want, got)
+			assert.Equal(t, tt.wantErr, gotErr)
+		})
+	}
 }
