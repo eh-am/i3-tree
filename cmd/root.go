@@ -58,6 +58,5 @@ func rootExec(ctx context.Context, args []string) error {
 		render.NewConsole(os.Stdout, true),
 	)
 
-	i3tv.View()
-	return nil
+	return i3tv.View()
 }
