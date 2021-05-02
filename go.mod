@@ -1,8 +1,9 @@
-module github.com/eh-am/i3-tree-viewer
+module github.com/eh-am/i3-tree
 
 go 1.15
 
 require (
+	github.com/eh-am/i3-tree-viewer v0.0.0-20210502210023-a8aa829baafa // indirect
 	github.com/google/go-cmp v0.5.5 // indirect
 	github.com/kr/pretty v0.1.0 // indirect
 	github.com/logrusorgru/aurora v2.0.3+incompatible

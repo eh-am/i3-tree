@@ -3,7 +3,7 @@ package prune_test
 import (
 	"testing"
 
-	"github.com/eh-am/i3-tree-viewer/pkg/prune"
+	"github.com/eh-am/i3-tree/pkg/prune"
 	"go.i3wm.org/i3/v4"
 	"gotest.tools/assert"
 )
