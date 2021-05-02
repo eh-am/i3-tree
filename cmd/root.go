@@ -4,27 +4,32 @@ import (
 	"context"
 	"flag"
 	"fmt"
-	"log"
 	"os"
 
 	"github.com/eh-am/i3-tree-viewer/i3treeviewer"
 	"github.com/eh-am/i3-tree-viewer/render"
 	"github.com/peterbourgon/ff/v3/ffcli"
-	"go.i3wm.org/i3/v4"
 )
 
 var pruneStratName *string
+var fetchStratName *string
 var rootFs *flag.FlagSet
 var root *ffcli.Command
 
 func init() {
 	rootFs = flag.NewFlagSet("root", flag.ExitOnError)
-	pruneStratName =
-		rootFs.String(
-			"prune-strat",
-			string(NonEmptyWsPruneStrat), // Default
-			"what to prune from the raw tree i3. "+fmt.Sprintf("%s", AvailablePruneStrats),
-		)
+
+	fetchStratName = rootFs.String(
+		"fetch-strat",
+		string(FromI3),
+		"where to fetch the tree from",
+	)
+
+	pruneStratName = rootFs.String(
+		"prune-strat",
+		string(NonEmptyWsPruneStrat), // Default
+		"what to prune from the (possible raw) tree i3. "+fmt.Sprintf("%s", AvailablePruneStrats),
+	)
 
 	root = &ffcli.Command{
 		Name:       "i3-tree-viewer",
@@ -36,9 +41,9 @@ func init() {
 }
 
 func rootExec(ctx context.Context, args []string) error {
-	tree, err := i3.GetTree()
+	fetcher, err := NewFetcher(*fetchStratName)
 	if err != nil {
-		log.Fatal(err)
+		return err
 	}
 
 	pruner, err := NewPruner(*pruneStratName)
@@ -47,10 +52,11 @@ func rootExec(ctx context.Context, args []string) error {
 	}
 
 	i3tv := i3treeviewer.NewI3TreeViewer(
+		fetcher,
 		pruner,
 		render.NewConsole(os.Stdout, true),
 	)
 
-	i3tv.View(&tree)
+	i3tv.View()
 	return nil
 }
