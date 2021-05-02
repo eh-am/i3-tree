@@ -25,7 +25,7 @@ type Pruner interface {
 func NewStrat(s string) (pruner Pruner, err error) {
 	switch PruneStratName(s) {
 	case NoneStrat:
-		pruner = &NoOpPruner{}
+		pruner = &NoOp{}
 
 	case NonEmptyWsStrat:
 		pruner = &NonEmptyWs{}
