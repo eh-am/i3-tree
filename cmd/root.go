@@ -23,13 +23,13 @@ func init() {
 	fetchStratName = rootFs.String(
 		"fetch-strat",
 		string(internal.FromI3),
-		"where to fetch the tree from",
+		"where to fetch the tree from. Available: "+fmt.Sprintf("%s", internal.AvailableFetchStrats),
 	)
 
 	pruneStratName = rootFs.String(
 		"prune-strat",
 		string(internal.NonEmptyWsPruneStrat), // Default
-		"what to prune from the (possible raw) tree i3. "+fmt.Sprintf("%s", internal.AvailablePruneStrats),
+		"what to prune from the (possible raw) tree i3. Available: "+fmt.Sprintf("%s", internal.AvailablePruneStrats),
 	)
 
 	root = &ffcli.Command{
