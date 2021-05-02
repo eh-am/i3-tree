@@ -1,4 +1,4 @@
-package treepruner
+package prune
 
 import (
 	"fmt"
@@ -28,7 +28,7 @@ func NewStrat(s string) (pruner Pruner, err error) {
 		pruner = &NoOpPruner{}
 
 	case NonEmptyWsStrat:
-		pruner = &NeWsPruner{}
+		pruner = &NonEmptyWs{}
 
 	default:
 		// TODO err

@@ -8,15 +8,15 @@ import (
 	"os"
 
 	"github.com/eh-am/i3-tree-viewer/i3treeviewer"
+	"github.com/eh-am/i3-tree-viewer/prune"
 	"github.com/eh-am/i3-tree-viewer/render"
-	"github.com/eh-am/i3-tree-viewer/treepruner"
 	"github.com/peterbourgon/ff/v3/ffcli"
 	"go.i3wm.org/i3/v4"
 )
 
 func main() {
 	rootFs := flag.NewFlagSet("root", flag.ExitOnError)
-	pruneStratName := rootFs.String("prune-strat", treepruner.NonEmptyWsStrat.String(), "what to remove from the raw tree i3 returns. available: "+fmt.Sprintf("%s", treepruner.AvailableStrats))
+	pruneStratName := rootFs.String("prune-strat", prune.NonEmptyWsStrat.String(), "what to remove from the raw tree i3 returns. available: "+fmt.Sprintf("%s", prune.AvailableStrats))
 
 	root := &ffcli.Command{
 		Name:       "i3-tree-viewer",
@@ -29,7 +29,7 @@ func main() {
 				log.Fatal(err)
 			}
 
-			pruner, err := treepruner.NewStrat(*pruneStratName)
+			pruner, err := prune.NewStrat(*pruneStratName)
 			if err != nil {
 				return err
 			}

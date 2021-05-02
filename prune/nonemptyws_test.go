@@ -1,9 +1,9 @@
-package treepruner_test
+package prune_test
 
 import (
 	"testing"
 
-	"github.com/eh-am/i3-tree-viewer/treepruner"
+	"github.com/eh-am/i3-tree-viewer/prune"
 	"go.i3wm.org/i3/v4"
 	"gotest.tools/assert"
 )
@@ -13,7 +13,7 @@ func TestNonEmptyWorkspace(t *testing.T) {
 		tree := &i3.Tree{}
 		want := &i3.Tree{}
 
-		w := &treepruner.NeWsPruner{}
+		w := &prune.NonEmptyWs{}
 		got := w.Prune(tree)
 
 		assert.DeepEqual(t, want, got)
@@ -28,7 +28,7 @@ func TestNonEmptyWorkspace(t *testing.T) {
 		}
 		want := &i3.Tree{}
 
-		w := &treepruner.NeWsPruner{}
+		w := &prune.NonEmptyWs{}
 		got := w.Prune(tree)
 
 		assert.DeepEqual(t, want, got)
@@ -72,7 +72,7 @@ func TestNonEmptyWorkspace(t *testing.T) {
 			},
 		}
 
-		w := &treepruner.NeWsPruner{}
+		w := &prune.NonEmptyWs{}
 		got := w.Prune(tree)
 
 		assert.DeepEqual(t, want, got)
@@ -159,7 +159,7 @@ func TestNonEmptyWorkspace(t *testing.T) {
 			},
 		}
 
-		w := &treepruner.NeWsPruner{}
+		w := &prune.NonEmptyWs{}
 		got := w.Prune(tree)
 
 		assert.DeepEqual(t, want, got)
