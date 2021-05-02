@@ -1,51 +1,9 @@
 package main
 
 import (
-	"context"
-	"flag"
-	"fmt"
-	"log"
-	"os"
-
-	"github.com/eh-am/i3-tree-viewer/i3treeviewer"
-	"github.com/eh-am/i3-tree-viewer/prune"
-	"github.com/eh-am/i3-tree-viewer/render"
-	"github.com/peterbourgon/ff/v3/ffcli"
-	"go.i3wm.org/i3/v4"
+	"github.com/eh-am/i3-tree-viewer/cmd"
 )
 
 func main() {
-	rootFs := flag.NewFlagSet("root", flag.ExitOnError)
-	pruneStratName := rootFs.String("prune-strat", prune.NonEmptyWsStrat.String(), "what to remove from the raw tree i3 returns. available: "+fmt.Sprintf("%s", prune.AvailableStrats))
-
-	root := &ffcli.Command{
-		Name:       "i3-tree-viewer",
-		ShortUsage: "i3-tree-viewer",
-		ShortHelp:  "Print a tree of non-empty workspaces to console",
-		FlagSet:    rootFs,
-		Exec: func(ctx context.Context, args []string) error {
-			tree, err := i3.GetTree()
-			if err != nil {
-				log.Fatal(err)
-			}
-
-			pruner, err := prune.NewStrat(*pruneStratName)
-			if err != nil {
-				return err
-			}
-
-			i3tv := i3treeviewer.NewI3TreeViewer(
-				pruner,
-				render.NewConsole(os.Stdout, true),
-			)
-
-			i3tv.View(&tree)
-			return nil
-		},
-	}
-
-	err := root.ParseAndRun(context.Background(), os.Args[1:])
-	if err != nil {
-		log.Fatal(err)
-	}
+	cmd.Main()
 }
