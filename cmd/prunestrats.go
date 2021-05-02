@@ -1,13 +1,19 @@
 package cmd
 
 import (
-	"fmt"
-
 	"github.com/eh-am/i3-tree-viewer/i3treeviewer"
 	"github.com/eh-am/i3-tree-viewer/prune"
 )
 
 type PruneStratName string
+
+type BadPruneStratError struct {
+	StratName string
+}
+
+func (e BadPruneStratError) Error() string {
+	return "invalid prune strat: " + e.StratName
+}
 
 var (
 	NonEmptyWsPruneStrat PruneStratName = "non-empty-ws"
@@ -30,7 +36,6 @@ func NewPruner(strat string) (i3treeviewer.Pruner, error) {
 		return &prune.NonEmptyWs{}, nil
 
 	default:
-		// TODO err
-		return nil, fmt.Errorf("invalid strat " + strat)
+		return nil, BadPruneStratError{strat}
 	}
 }
