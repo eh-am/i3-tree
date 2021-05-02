@@ -1,8 +1,8 @@
 package internal
 
 import (
-	"github.com/eh-am/i3-tree-viewer/pkg/i3treeviewer"
-	"github.com/eh-am/i3-tree-viewer/pkg/prune"
+	"github.com/eh-am/i3-tree/pkg/i3treeviewer"
+	"github.com/eh-am/i3-tree/pkg/prune"
 )
 
 type PruneStratName string

@@ -3,8 +3,8 @@ package internal
 import (
 	"fmt"
 
-	"github.com/eh-am/i3-tree-viewer/pkg/fetch"
-	"github.com/eh-am/i3-tree-viewer/pkg/i3treeviewer"
+	"github.com/eh-am/i3-tree/pkg/fetch"
+	"github.com/eh-am/i3-tree/pkg/i3treeviewer"
 )
 
 type BadFetchStratError struct{ StratName string }

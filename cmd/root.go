@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/eh-am/i3-tree-viewer/cmd/internal"
-	"github.com/eh-am/i3-tree-viewer/pkg/i3treeviewer"
-	"github.com/eh-am/i3-tree-viewer/pkg/render"
+	"github.com/eh-am/i3-tree/cmd/internal"
+	"github.com/eh-am/i3-tree/pkg/i3treeviewer"
+	"github.com/eh-am/i3-tree/pkg/render"
 	"github.com/peterbourgon/ff/v3/ffcli"
 )
 
@@ -33,8 +33,8 @@ func init() {
 	)
 
 	root = &ffcli.Command{
-		Name:       "i3-tree-viewer",
-		ShortUsage: "i3-tree-viewer",
+		Name:       "i3-tree",
+		ShortUsage: "i3-tree",
 		ShortHelp:  "Print the i3 tree in a user friendly format",
 		FlagSet:    rootFs,
 		Exec:       rootExec,
