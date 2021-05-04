@@ -7,14 +7,6 @@ import (
 
 type PruneStratName string
 
-type BadPruneStratError struct {
-	StratName string
-}
-
-func (e BadPruneStratError) Error() string {
-	return "invalid prune strat: " + e.StratName
-}
-
 var (
 	NonEmptyWsPruneStrat PruneStratName = "non-empty-ws"
 	NonePruneStrat       PruneStratName = "none"
@@ -36,6 +28,6 @@ func NewPruner(strat string) (i3treeviewer.Pruner, error) {
 		return &prune.NonEmptyWs{}, nil
 
 	default:
-		return nil, BadPruneStratError{strat}
+		return nil, BadStratError{strat}
 	}
 }

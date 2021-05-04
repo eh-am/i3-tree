@@ -1,18 +1,9 @@
 package internal
 
 import (
-	"fmt"
-
 	"github.com/eh-am/i3-tree/pkg/fetch"
 	"github.com/eh-am/i3-tree/pkg/i3treeviewer"
 )
-
-type BadFetchStratError struct{ StratName string }
-
-func (e BadFetchStratError) Error() string {
-	return "invalid fetch strat: " + e.StratName + "\n" +
-		"possible values: " + fmt.Sprintf("%s", AvailableFetchStrats)
-}
 
 // Fetch Strategies
 type FetchStratName string
@@ -34,6 +25,6 @@ func NewFetcher(strat string) (i3treeviewer.Fetcher, error) {
 	case Fake:
 		return fetch.FromFake{}, nil
 	default:
-		return nil, BadFetchStratError{strat}
+		return nil, BadStratError{strat}
 	}
 }

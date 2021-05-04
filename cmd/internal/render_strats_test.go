@@ -17,7 +17,7 @@ func TestNewRenderer(t *testing.T) {
 	}{
 		{"console", render.ColoredConsole{}, nil},
 		{"console-no-color", render.MonochromaticConsole{}, nil},
-		{"unknown", nil, internal.BadRendererStratError{"unknown"}},
+		{"unknown", nil, internal.BadStratError{"unknown"}},
 	}
 
 	for _, tt := range cases {

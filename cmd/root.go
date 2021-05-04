@@ -10,6 +10,16 @@ import (
 	"github.com/peterbourgon/ff/v3/ffcli"
 )
 
+var flagHelp = `i3-tree generates a user friendly view of the i3 tree
+
+EXAMPLES
+# show all non empty workspaces
+i3-tree
+
+# show all non empty workspaces, without colored output
+i3-tree --render=no-color
+`
+
 var pruneStratName *string
 var fetchStratName *string
 var renderStratName *string
@@ -21,26 +31,27 @@ func init() {
 	rootFs = flag.NewFlagSet("root", flag.ExitOnError)
 
 	fetchStratName = rootFs.String(
-		"fetch-strat",
+		"from",
 		string(internal.FromI3),
-		"where to fetch the tree from. Available: "+fmt.Sprintf("%s", internal.AvailableFetchStrats),
+		"where to fetch the tree from. available: "+fmt.Sprintf("%s", internal.AvailableFetchStrats),
 	)
 
 	pruneStratName = rootFs.String(
-		"prune-strat",
+		"pick",
 		string(internal.NonEmptyWsPruneStrat), // Default
-		"what to prune from the (possible raw) tree i3. Available: "+fmt.Sprintf("%s", internal.AvailablePruneStrats),
+		fmt.Sprintf(`what to prune from the i3 tree. available: %s`, internal.AvailablePruneStrats),
 	)
 
 	renderStratName = rootFs.String(
-		"render-strat",
+		"render",
 		string(internal.ConsoleStrat), // Default
-		"where/how to render the output. Available: "+fmt.Sprintf("%s", internal.AvailableRendererStrats),
+		"where/how to render the output to. available: "+fmt.Sprintf("%s", internal.AvailableRendererStrats),
 	)
 
 	root = &ffcli.Command{
 		Name:       "i3-tree",
 		ShortUsage: "i3-tree",
+		LongHelp:   flagHelp,
 		ShortHelp:  "Print the i3 tree in a user friendly format",
 		FlagSet:    rootFs,
 		Exec:       rootExec,

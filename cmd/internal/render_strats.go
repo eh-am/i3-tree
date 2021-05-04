@@ -9,24 +9,22 @@ import (
 
 type RendererStrat string
 
-type BadRendererStratError struct {
-	StratName string
-}
-
-func (e BadRendererStratError) Error() string {
-	return "invalid render strat: " + e.StratName
-}
-
 var (
-	ConsoleStrat        RendererStrat = "console"
-	ConsoleNoColorStrat RendererStrat = "console-no-color"
+	// Console strategy
+	ConsoleStrat RendererStrat = "console"
+	// Console, but no color strategy
+	ConsoleNoColorStrat RendererStrat = "no-color"
 
+	// List of all available render strategies
 	AvailableRendererStrats = []RendererStrat{
 		ConsoleStrat,
 		ConsoleNoColorStrat,
 	}
 )
 
+// NewRenderer creates a i3treeviewer.Renderer
+// Based on a strategy
+// Otherwise it fails with BadStratError
 func NewRenderer(strat string) (i3treeviewer.Renderer, error) {
 	switch RendererStrat(strat) {
 	case ConsoleStrat:
@@ -36,6 +34,6 @@ func NewRenderer(strat string) (i3treeviewer.Renderer, error) {
 		return render.NewMonochromaticConsole(os.Stdout), nil
 
 	default:
-		return nil, BadRendererStratError{strat}
+		return nil, BadStratError{strat}
 	}
 }
