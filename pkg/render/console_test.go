@@ -174,7 +174,7 @@ func TestConRendererNoColor(t *testing.T) {
 	tree := fakeTree()
 
 	var writer bytes.Buffer
-	r := render.NewConsole(io.Writer(&writer), false)
+	r := render.NewMonochromaticConsole(io.Writer(&writer))
 	r.Render(&tree)
 
 	got := writer.String()
@@ -211,7 +211,7 @@ func TestConRendererWithColor(t *testing.T) {
 	tree := fakeTree()
 
 	var writer bytes.Buffer
-	r := render.NewConsole(io.Writer(&writer), true)
+	r := render.NewColoredConsole(io.Writer(&writer))
 	r.Render(&tree)
 
 	got := writer.String()

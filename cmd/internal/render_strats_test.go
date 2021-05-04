@@ -16,7 +16,7 @@ func TestNewRenderer(t *testing.T) {
 		wantErr   error
 	}{
 		{"console", render.ColoredConsole{}, nil},
-		{"console-no-color", render.MonochromaticConsole{}, nil},
+		{"no-color", render.MonochromaticConsole{}, nil},
 		{"unknown", nil, internal.BadStratError{"unknown"}},
 	}
 
