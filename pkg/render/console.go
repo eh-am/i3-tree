@@ -8,12 +8,31 @@ import (
 	"go.i3wm.org/i3/v4"
 )
 
+type ColoredConsole struct {
+	*console
+}
+type MonochromaticConsole struct {
+	*console
+}
+
 type console struct {
 	w  io.Writer
 	au aurora.Aurora
 }
 
-func NewConsole(w io.Writer, colors bool) *console {
+func NewColoredConsole(w io.Writer) ColoredConsole {
+	return ColoredConsole{
+		newConsole(w, true),
+	}
+}
+
+func NewMonochromaticConsole(w io.Writer) MonochromaticConsole {
+	return MonochromaticConsole{
+		newConsole(w, false),
+	}
+}
+
+func newConsole(w io.Writer, colors bool) *console {
 	return &console{
 		w:  w,
 		au: aurora.NewAurora(colors),
