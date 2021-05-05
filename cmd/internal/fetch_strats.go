@@ -10,11 +10,11 @@ type FetchStratName string
 
 var (
 	FromI3 FetchStratName = "i3"
-	Fake   FetchStratName = "fake"
+	Mock   FetchStratName = "mock"
 
 	AvailableFetchStrats = []FetchStratName{
 		FromI3,
-		Fake,
+		Mock,
 	}
 )
 
@@ -22,7 +22,7 @@ func NewFetcher(strat string) (i3treeviewer.Fetcher, error) {
 	switch FetchStratName(strat) {
 	case FromI3:
 		return fetch.FromI3{}, nil
-	case Fake:
+	case Mock:
 		return fetch.FromFake{}, nil
 	default:
 		return nil, BadStratError{strat}

@@ -12,27 +12,6 @@ go get github.com/eh-am/i3-tree
 > i3-tree
 
 [root] root
-├──[output][output] HDMI-0
-│  ├──[workspace][splith] 1
-│  │  └──[con] Reddit.com - Mozilla Firefox
-│  ├──[workspace][stacked] 2
-│  │  ├──[con] Twitter.com - Mozilla Firefox
-│  │  ├──[con] Stackoverflow.com - Google Chrome
-│  │  └──[con] duckduckgo.com - Chromium
-│  ├──[workspace][splitv] 3
-│  │  ├──[con] Mozilla Firefox
-│  │  └──[con] VLC media player
-│  ├──[workspace][tabbed] 4
-│  │  ├──[con] kubernetes.io - Mozilla Firefox
-│  │  ├──[con] VLC media player
-│  │  └──[con] Slack
-│  └──[workspace][splith] 5
-│     ├──[con][splitv] 
-│     │  ├──[con] /bin/bash
-│     │  └──[con] /bin/bash
-│     └──[con][splitv] 
-│        ├──[con] /bin/bash
-│        └──[con] /bin/bash
 └──[output][output] HDMI-1
    └──[workspace][splith] 6
       ├──[con][splitv] 

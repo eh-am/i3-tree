@@ -15,6 +15,10 @@ func (t *console) wrapBrackets(s string) string {
 }
 
 func (t *console) formatLayout(node *i3.Node, au aurora.Aurora) string {
+	if node == nil {
+		return ""
+	}
+
 	formatFn := func(layout i3.Layout, au aurora.Aurora) string {
 		s := string(layout)
 		switch layout {
@@ -42,6 +46,10 @@ func (t *console) formatLayout(node *i3.Node, au aurora.Aurora) string {
 }
 
 func (t *console) formatType(node *i3.Node, au aurora.Aurora) string {
+	if node == nil {
+		return ""
+	}
+
 	formatFn := func(t i3.NodeType, au aurora.Aurora) string {
 		s := string(t)
 

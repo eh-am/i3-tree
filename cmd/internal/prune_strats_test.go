@@ -11,18 +11,19 @@ import (
 
 func TestNewPruner(t *testing.T) {
 	cases := []struct {
-		stratName string
-		want      i3treeviewer.Pruner
-		wantErr   error
+		arg     string
+		want    i3treeviewer.Pruner
+		wantErr error
 	}{
-		{"none", &prune.NoOp{}, nil},
-		{"non-empty-ws", &prune.NonEmptyWs{}, nil},
-		{"unknown", nil, internal.BadStratError{"unknown"}},
+		{"all", &prune.NonEmptyWs{}, nil},
+		{"", &prune.FocusedWs{}, nil},
+		{"raw", &prune.NoOp{}, nil},
+		{"5", &prune.Ws{WsIndex: "5"}, nil},
 	}
 
 	for _, tt := range cases {
-		t.Run(tt.stratName, func(t *testing.T) {
-			got, gotErr := internal.NewPruner(tt.stratName)
+		t.Run(tt.arg, func(t *testing.T) {
+			got, gotErr := internal.NewPruner(tt.arg)
 
 			assert.Equal(t, tt.want, got)
 			assert.Equal(t, tt.wantErr, gotErr)

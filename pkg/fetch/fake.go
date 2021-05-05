@@ -129,8 +129,9 @@ func fakeTree() i3.Tree {
 				Layout: i3.Layout(i3.SplitV),
 				Nodes: []*i3.Node{
 					{
-						Name: "VLC media player",
-						Type: i3.NodeType(i3.Con),
+						Name:    "VLC media player",
+						Type:    i3.NodeType(i3.Con),
+						Focused: true,
 					},
 				},
 			},

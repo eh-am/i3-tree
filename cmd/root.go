@@ -13,14 +13,22 @@ import (
 var flagHelp = `i3-tree generates a user friendly view of the i3 tree
 
 EXAMPLES
-# show all non empty workspaces
+# display focused workspace
 i3-tree
 
-# show all non empty workspaces, without colored output
+# display all non empty workspaces
+i3-tree all
+
+# show a specific workspace (for example, workspace 6)
+i3-tree 6
+
+# show focused workspace, with no colors
 i3-tree --render=no-color
+
+# use mock data (useful if you don't have i3 running)
+i3-tree --from=mock
 `
 
-var pruneStratName *string
 var fetchStratName *string
 var renderStratName *string
 
@@ -34,12 +42,6 @@ func init() {
 		"from",
 		string(internal.FromI3),
 		"where to fetch the tree from. available: "+fmt.Sprintf("%s", internal.AvailableFetchStrats),
-	)
-
-	pruneStratName = rootFs.String(
-		"pick",
-		string(internal.NonEmptyWsPruneStrat), // Default
-		fmt.Sprintf(`what to prune from the i3 tree. available: %s`, internal.AvailablePruneStrats),
 	)
 
 	renderStratName = rootFs.String(
@@ -64,7 +66,11 @@ func rootExec(ctx context.Context, args []string) error {
 		return err
 	}
 
-	pruner, err := internal.NewPruner(*pruneStratName)
+	pruneArg := ""
+	if len(args) > 0 {
+		pruneArg = args[0]
+	}
+	pruner, err := internal.NewPruner(pruneArg)
 	if err != nil {
 		return err
 	}

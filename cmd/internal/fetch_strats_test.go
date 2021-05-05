@@ -16,7 +16,7 @@ func TestNewFetcher(t *testing.T) {
 		wantErr   error
 	}{
 		{"i3", fetch.FromI3{}, nil},
-		{"fake", fetch.FromFake{}, nil},
+		{"mock", fetch.FromFake{}, nil},
 		{"unknown", nil, internal.BadStratError{"unknown"}},
 	}
 
