@@ -59,11 +59,33 @@ go get github.com/eh-am/i3-tree
 ![Output example](./docs/example.svg)
 
 # help
+
 ```
+> i3-tree --help
+
 USAGE
   i3-tree
 
+i3-tree generates a user friendly view of the i3 tree
+
+EXAMPLES
+# display focused workspace
+i3-tree
+
+# display all non empty workspaces
+i3-tree all
+
+# show a specific workspace (for example, workspace 6)
+i3-tree 6
+
+# show focused workspace, with no colors
+i3-tree --render=no-color
+
+# use mock data (useful if you don't have i3 running)
+i3-tree --from=mock
+
+
 FLAGS
-  -fetch-strat i3            where to fetch the tree from. Available: [i3 fake]
-  -prune-strat non-empty-ws  what to prune from the (possible raw) tree i3. Available: [non-empty-ws none]
+  -from i3         where to fetch the tree from. available: [i3 mock]
+  -render console  where/how to render the output to. available: [console no-color]
 ```
