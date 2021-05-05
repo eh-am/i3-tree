@@ -5,29 +5,20 @@ import (
 	"github.com/eh-am/i3-tree/pkg/prune"
 )
 
-type PruneStratName string
-
-var (
-	NonEmptyWsPruneStrat PruneStratName = "non-empty-ws"
-	NonePruneStrat       PruneStratName = "none"
-
-	AvailablePruneStrats = []PruneStratName{
-		NonEmptyWsPruneStrat,
-		NonePruneStrat,
-	}
-)
-
 // NewPruner decides which prune strategy to use
 // Based on the flag name
-func NewPruner(strat string) (i3treeviewer.Pruner, error) {
-	switch PruneStratName(strat) {
-	case NonePruneStrat:
-		return &prune.NoOp{}, nil
+func NewPruner(arg string) (i3treeviewer.Pruner, error) {
+	switch arg {
+	case "":
+		return &prune.FocusedWs{}, nil
 
-	case NonEmptyWsPruneStrat:
+	case "all":
 		return &prune.NonEmptyWs{}, nil
 
+	case "raw":
+		return &prune.NoOp{}, nil
+
 	default:
-		return nil, BadStratError{strat}
+		return &prune.Ws{WsIndex: arg}, nil
 	}
 }

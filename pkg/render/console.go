@@ -44,6 +44,10 @@ func (t *console) Render(tree *i3.Tree) {
 }
 
 func (t *console) print(node *i3.Node, prefix string, marker string, level int) {
+	if node == nil {
+		return
+	}
+
 	ftype := t.formatType(node, t.au)
 	flayout := t.formatLayout(node, t.au)
 
